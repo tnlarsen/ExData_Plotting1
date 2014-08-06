@@ -1,4 +1,6 @@
 
+#Note: The code for loading the data is in "main.R"
+
 plot4 <- function(data) {
   
   print("Creating plot4")

@@ -20,8 +20,7 @@ load <- function() {
   print('Loading')
 
   data <- read.csv.sql(csvFileName, sep=";", 
-            sql = 'select * from file where Date = "1/2/2007" or Date = "2/2/2007"'
-            , colClasses=c("Date"="Date"))
+            sql = 'select * from file where Date = "1/2/2007" or Date = "2/2/2007"')
   
   data
 }

@@ -1,6 +1,3 @@
-
-#Note: The code for loading the data is in "main.R"
-
 plot2 <- function(data) {
   
   print("Creating plot2")
@@ -11,4 +8,11 @@ plot2 <- function(data) {
   
   dev.off()
   
-}
+} 
+
+#Note: The code for loading the data is in "main.R"
+source("main.R")
+
+data <- preprocess(load())
+
+plot2(data)

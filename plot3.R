@@ -1,6 +1,3 @@
-
-#Note: The code for loading the data is in "main.R"
-
 plot3 <- function(data) {
   
   print("Creating plot3")
@@ -17,3 +14,10 @@ plot3 <- function(data) {
   dev.off()
   
 }
+
+#Note: The code for loading the data is in "main.R"
+source("main.R")
+
+data <- preprocess(load())
+
+plot3(data)

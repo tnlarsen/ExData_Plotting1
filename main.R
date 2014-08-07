@@ -18,6 +18,7 @@ load <- function() {
   }
   
   print('Loading')
+  library(sqldf)
 
   data <- read.csv.sql(csvFileName, sep=";", 
             sql = 'select * from file where Date = "1/2/2007" or Date = "2/2/2007"')
@@ -30,23 +31,3 @@ preprocess <- function(data) {
   data$DateTime = strptime(paste(data$Date, " ", data$Time), format="%d/%m/%Y %H:%M:%S")
   data
 }
-
-#The function to call to get the data read and the plots generated
-main <- function() {
-   
-  library(sqldf)
-  source("plot1.R")
-  source("plot2.R")
-  source("plot3.R")
-  source("plot4.R") 
-  
-  data <- load()
-  data <- preprocess(data)
-
-  plot1(data) 
-  plot2(data) 
-  plot3(data)  
-  plot4(data)  
-}
-
-main()
